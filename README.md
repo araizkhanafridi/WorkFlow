@@ -30,3 +30,10 @@ It helps users organize tasks, manage projects, track progress, and view product
 - Vite
 - Tailwind CSS
 - LocalStorage
+## Getting Started
+
+```bash
+git clone https://github.com/araizkhanafridi/WorkFlow.git
+cd WorkFlow
+npm install
+npm run dev
