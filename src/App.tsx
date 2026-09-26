@@ -47,24 +47,7 @@ function App() {
       }
     }
 
-    return [
-      {
-        id: 1,
-        title: "Design homepage",
-        dueDate: "Due tomorrow",
-        status: "In Progress",
-        priority: "High",
-        projectId: null,
-      },
-      {
-        id: 2,
-        title: "Create project structure",
-        dueDate: "Due today",
-        status: "Completed",
-        priority: "Low",
-        projectId: null,
-      },
-    ]
+    return []
   })
 
 
