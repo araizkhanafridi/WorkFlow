@@ -708,7 +708,7 @@ function App() {
 
                     <p className="text-sm text-gray-500 mt-1">
                       {tasks.length === 0
-                        ? "Create your first task to get started."
+                        ? "Add your first task to get started."
                         : "Try changing your search or filters."}
                     </p>
 
@@ -955,7 +955,7 @@ function App() {
 
                     <p className="text-sm text-gray-500 mt-1">
                       {tasks.length === 0
-                        ? "Create your first task to get started."
+                        ? "Add your first task to get started."
                         : "Try changing your search or filters."}
                     </p>
 
