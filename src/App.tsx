@@ -701,11 +701,15 @@ function App() {
                   <div className="py-12 text-center">
 
                     <h4 className="text-lg font-semibold text-gray-700">
-                      No tasks found
+                      {tasks.length === 0
+                        ? "No tasks yet"
+                        : "No tasks found"}
                     </h4>
 
                     <p className="text-sm text-gray-500 mt-1">
-                      Try changing your search or filter.
+                      {tasks.length === 0
+                        ? "Create your first task to get started."
+                        : "Try changing your search or filters."}
                     </p>
 
                   </div>
@@ -944,11 +948,15 @@ function App() {
                   <div className="py-12 text-center">
 
                     <h4 className="text-lg font-semibold text-gray-700">
-                      No tasks found
+                      {tasks.length === 0
+                        ? "No tasks yet"
+                        : "No tasks found"}
                     </h4>
 
                     <p className="text-sm text-gray-500 mt-1">
-                      Try changing your search or filter.
+                      {tasks.length === 0
+                        ? "Create your first task to get started."
+                        : "Try changing your search or filters."}
                     </p>
 
                   </div>
