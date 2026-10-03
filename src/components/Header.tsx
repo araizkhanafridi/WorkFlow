@@ -14,7 +14,6 @@ function Header({
   return (
     <header className="mb-8 flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
 
-      {/* Left Side */}
       <div>
 
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
@@ -28,7 +27,6 @@ function Header({
       </div>
 
 
-      {/* Right Side */}
       <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
 
         <input

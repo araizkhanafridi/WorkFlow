@@ -70,7 +70,6 @@ function EditProjectForm({
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-        {/* Project Name */}
 
         <div>
 
@@ -90,7 +89,6 @@ function EditProjectForm({
         </div>
 
 
-        {/* Description */}
 
         <div className="sm:col-span-2 lg:col-span-1">
 
@@ -110,7 +108,6 @@ function EditProjectForm({
         </div>
 
 
-        {/* Status */}
 
         <div>
 
@@ -141,7 +138,6 @@ function EditProjectForm({
       </div>
 
 
-      {/* Error */}
 
       {error && (
 
@@ -152,7 +148,6 @@ function EditProjectForm({
       )}
 
 
-      {/* Buttons */}
 
       <div className="flex flex-col-reverse gap-3 mt-4 sm:flex-row sm:justify-end">
 

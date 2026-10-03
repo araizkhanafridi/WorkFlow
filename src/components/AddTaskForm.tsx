@@ -101,10 +101,7 @@ function AddTaskForm({
     >
 
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4">
-
-
-        {/* Task Title */}
-
+        
         <div className="sm:col-span-2 xl:col-span-1">
 
           <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -121,7 +118,6 @@ function AddTaskForm({
         </div>
 
 
-        {/* Due Date */}
 
         <div>
 
@@ -138,7 +134,6 @@ function AddTaskForm({
         </div>
 
 
-        {/* Status */}
 
         <div>
 
@@ -169,7 +164,6 @@ function AddTaskForm({
         </div>
 
 
-        {/* Priority */}
 
         <div>
 
@@ -200,7 +194,6 @@ function AddTaskForm({
         </div>
 
 
-        {/* Project */}
 
         <div>
 
@@ -236,7 +229,6 @@ function AddTaskForm({
       </div>
 
 
-      {/* Error */}
 
       {error && (
 
@@ -247,7 +239,6 @@ function AddTaskForm({
       )}
 
 
-      {/* Submit */}
 
       <div className="mt-4">
 

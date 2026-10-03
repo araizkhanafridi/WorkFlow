@@ -31,9 +31,7 @@ type Project = {
 
 function App() {
 
-  // =========================
-  // TASKS STATE
-  // =========================
+
 
   const [tasks, setTasks] = useState<Task[]>(() => {
 
@@ -51,9 +49,7 @@ function App() {
   })
 
 
-  // =========================
-  // TASK UI STATE
-  // =========================
+
 
   const [showForm, setShowForm] =
     useState(false)
@@ -77,17 +73,10 @@ function App() {
     useState(false)
 
 
-  // =========================
-  // NAVIGATION
-  // =========================
-
   const [activePage, setActivePage] =
     useState("Dashboard")
 
 
-  // =========================
-  // PROJECTS STATE
-  // =========================
 
   const [projects, setProjects] =
     useState<Project[]>(() => {
@@ -117,9 +106,7 @@ function App() {
     useState<Project | null>(null)
 
 
-  // =========================
-  // AUTOMATIC TASK STATUS
-  // =========================
+
 
   const getTaskStatus = (task: Task) => {
 
@@ -151,9 +138,7 @@ function App() {
   }
 
 
-  // =========================
-  // LOCAL STORAGE
-  // =========================
+  
 
   useEffect(() => {
 
@@ -175,10 +160,7 @@ function App() {
   }, [projects])
 
 
-  // =========================
-  // TASK FUNCTIONS
-  // =========================
-
+  
   const handleAddTask = (
     title: string,
     dueDate: string,
@@ -328,9 +310,7 @@ function App() {
     setShowResetConfirm(false)
   }
 
-  // =========================
-  // PROJECT FUNCTIONS
-  // =========================
+ 
 
   const handleAddProject = (
     name: string,
@@ -386,8 +366,7 @@ function App() {
     )
 
 
-    // Agar wahi project View Tasks mein open hai,
-    // to uska updated naam/details bhi refresh karo
+   
     if (
       selectedProject?.id ===
       editingProject.id
@@ -438,7 +417,7 @@ function App() {
 
     const projectId = projectToDelete.id
 
-    // Delete the project
+   
     setProjects((currentProjects) =>
       currentProjects.filter(
         (project) =>
@@ -446,7 +425,7 @@ function App() {
       )
     )
 
-    // Delete all tasks assigned to this project
+   
     setTasks((currentTasks) =>
       currentTasks.filter(
         (task) =>
@@ -454,34 +433,27 @@ function App() {
       )
     )
 
-    // Close selected project if it is being viewed
     if (selectedProject?.id === projectId) {
       setSelectedProject(null)
     }
 
-    // Close edit form if a task from this project is being edited
     if (editingTask?.projectId === projectId) {
       setEditingTask(null)
     }
 
-    // Close project edit form if this project is being edited
     if (editingProject?.id === projectId) {
       setEditingProject(null)
     }
 
-    // Reset project filter if the deleted project was selected
     if (projectFilter === String(projectId)) {
       setProjectFilter("All")
     }
 
-    // Close confirmation modal
     setProjectToDelete(null)
   }
 
 
-  // =========================
-  // TASK STATISTICS
-  // =========================
+
 
   const totalTasks =
     tasks.length
@@ -523,9 +495,7 @@ function App() {
       )
 
 
-  // =========================
-  // SEARCH + FILTER
-  // =========================
+
 
   const filteredTasks = tasks
     .filter((task) =>
@@ -557,9 +527,7 @@ function App() {
       )
     })
 
-  // =========================
-  // RECENT TASKS
-  // =========================
+ 
 
   const recentTasks =
     filteredTasks
@@ -572,7 +540,6 @@ function App() {
     <div className="min-h-screen bg-gray-100 flex">
 
 
-      {/* Sidebar */}
 
       <Sidebar
         activePage={activePage}
@@ -580,14 +547,10 @@ function App() {
       />
 
 
-      {/* Main Content */}
 
       <main className="flex-1 min-w-0 px-4 pb-6 pt-20 lg:p-8">
 
 
-        {/* =========================
-            DASHBOARD PAGE
-        ========================= */}
 
         {activePage === "Dashboard" && (
 
@@ -601,7 +564,6 @@ function App() {
             />
 
 
-            {/* Statistics */}
 
             <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
@@ -628,7 +590,6 @@ function App() {
             </section>
 
 
-            {/* Recent Tasks */}
 
             <section className="mt-8 bg-white rounded-xl border border-gray-200 p-4 sm:p-6">
 
@@ -663,7 +624,6 @@ function App() {
               </div>
 
 
-              {/* Add Task Form */}
 
               {showForm && (
 
@@ -675,7 +635,6 @@ function App() {
               )}
 
 
-              {/* Edit Task Form */}
 
               {editingTask && (
 
@@ -692,7 +651,6 @@ function App() {
               )}
 
 
-              {/* Recent Task Cards */}
 
               <div className="mt-4">
 
@@ -759,16 +717,11 @@ function App() {
         )}
 
 
-        {/* =========================
-            TASKS PAGE
-        ========================= */}
-
         {activePage === "Tasks" && (
 
           <div className="min-w-0">
 
 
-            {/* Tasks Header */}
 
             <div className="flex flex-col gap-5 mb-8 min-w-0 lg:flex-row lg:items-center lg:justify-between">
 
@@ -788,7 +741,6 @@ function App() {
               <div className="flex flex-col sm:flex-row gap-3 w-full min-w-0 lg:w-auto lg:flex-1 lg:justify-end">
 
 
-                {/* Search */}
 
                 <input
                   type="text"
@@ -802,7 +754,6 @@ function App() {
                   className="w-full sm:flex-1 lg:flex-none lg:w-70 px-4 py-2.5 border border-gray-200 rounded-lg outline-none focus:border-gray-400 bg-white" />
 
 
-                {/* Status Filter */}
 
                 <select
                   value={statusFilter}
@@ -837,7 +788,6 @@ function App() {
                 </select>
 
 
-                {/* Project Filter */}
 
                 <select
                   value={projectFilter}
@@ -875,7 +825,6 @@ function App() {
             </div>
 
 
-            {/* All Tasks */}
 
             <section className="min-w-0 bg-white border border-gray-200 rounded-xl p-4 sm:p-6">
 
@@ -910,7 +859,6 @@ function App() {
               </div>
 
 
-              {/* Add Task */}
 
               {showForm && (
 
@@ -922,7 +870,6 @@ function App() {
               )}
 
 
-              {/* Edit Task */}
 
               {editingTask && (
 
@@ -939,7 +886,6 @@ function App() {
               )}
 
 
-              {/* Task Cards */}
 
               <div className="mt-4">
 
@@ -1006,16 +952,12 @@ function App() {
         )}
 
 
-        {/* =========================
-            PROJECTS PAGE
-        ========================= */}
 
         {activePage === "Projects" && (
 
           <div>
 
 
-            {/* Projects Header */}
 
             <div className="flex flex-col gap-4 mb-8 sm:flex-row sm:items-center sm:justify-between">
 
@@ -1050,7 +992,6 @@ function App() {
             </div>
 
 
-            {/* Add Project Form */}
 
             {showProjectForm && (
 
@@ -1076,7 +1017,6 @@ function App() {
             )}
 
 
-            {/* Projects List */}
 
             <section className="mt-6 bg-white border border-gray-200 rounded-xl p-4 sm:p-6">
 
@@ -1163,7 +1103,6 @@ function App() {
             </section>
 
 
-            {/* Selected Project Tasks */}
 
             {selectedProject && (
 
@@ -1198,7 +1137,6 @@ function App() {
                 </div>
 
 
-                {/* Edit Task Form */}
 
                 {editingTask &&
                   editingTask.projectId === selectedProject.id && (
@@ -1280,9 +1218,7 @@ function App() {
         )}
 
 
-        {/* =========================
-            ANALYTICS PAGE
-        ========================= */}
+       
 
         {activePage === "Analytics" && (
 
@@ -1304,7 +1240,6 @@ function App() {
             </div>
 
 
-            {/* Analytics Cards */}
 
             <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
@@ -1331,7 +1266,6 @@ function App() {
             </section>
 
 
-            {/* Completion Progress */}
 
             <section className="mt-8 bg-white border border-gray-200 rounded-xl p-4 sm:p-6">
 
@@ -1372,7 +1306,6 @@ function App() {
             </section>
 
 
-            {/* Task Status Overview */}
 
             <section className="mt-6 bg-white border border-gray-200 rounded-xl p-4 sm:p-6">
 
@@ -1388,7 +1321,6 @@ function App() {
               <div className="space-y-5">
 
 
-                {/* Completed */}
 
                 <div>
 
@@ -1422,7 +1354,6 @@ function App() {
                 </div>
 
 
-                {/* In Progress */}
 
                 <div>
 
@@ -1456,7 +1387,6 @@ function App() {
                 </div>
 
 
-                {/* Pending */}
 
                 <div>
 
@@ -1490,7 +1420,6 @@ function App() {
                 </div>
 
 
-                {/* Overdue */}
 
                 <div>
 
@@ -1532,10 +1461,6 @@ function App() {
 
         )}
 
-
-        {/* =========================
-            SETTINGS PAGE
-        ========================= */}
 
         {activePage === "Settings" && (
 
@@ -1640,9 +1565,7 @@ function App() {
       </main>
 
 
-      {/* =========================
-          DELETE CONFIRMATION
-      ========================= */}
+  
 
       {taskToDelete && (
 
@@ -1704,9 +1627,7 @@ function App() {
       )}
 
 
-      {/* =========================
-          PROJECT DELETE CONFIRMATION
-      ========================= */}
+
 
       {projectToDelete && (
 
@@ -1773,9 +1694,7 @@ function App() {
       )}
 
 
-      {/* =========================
-          CLEAR COMPLETED CONFIRMATION
-      ========================= */}
+    
 
       {showClearCompletedConfirm && (
 
@@ -1831,9 +1750,7 @@ function App() {
       )}
 
 
-      {/* =========================
-          RESET WORKSPACE CONFIRMATION
-      ========================= */}
+   
 
       {showResetConfirm && (
 

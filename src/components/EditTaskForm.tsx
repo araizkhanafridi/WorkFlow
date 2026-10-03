@@ -131,7 +131,6 @@ function EditTaskForm({
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4">
 
 
-        {/* Title */}
 
         <div className="sm:col-span-2 xl:col-span-1">
 
@@ -151,7 +150,6 @@ function EditTaskForm({
         </div>
 
 
-        {/* Due Date */}
 
         <div>
 
@@ -171,7 +169,6 @@ function EditTaskForm({
         </div>
 
 
-        {/* Status */}
 
         <div>
 
@@ -208,7 +205,6 @@ function EditTaskForm({
         </div>
 
 
-        {/* Priority */}
 
         <div>
 
@@ -241,7 +237,6 @@ function EditTaskForm({
         </div>
 
 
-        {/* Project */}
 
         <div>
 
@@ -284,7 +279,6 @@ function EditTaskForm({
       </div>
 
 
-      {/* Error */}
 
       {error && (
 
@@ -295,7 +289,6 @@ function EditTaskForm({
       )}
 
 
-      {/* Buttons */}
 
       <div className="flex flex-col-reverse gap-3 mt-4 sm:flex-row sm:justify-end">
 

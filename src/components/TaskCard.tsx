@@ -66,7 +66,6 @@ function TaskCard({
       <div className="flex flex-col gap-4 min-w-0 lg:flex-row lg:items-center lg:justify-between">
 
 
-        {/* Task Information */}
 
         <div className="min-w-0 flex-1 overflow-hidden">
 
@@ -87,12 +86,9 @@ function TaskCard({
         </div>
 
 
-        {/* Task Controls */}
 
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:flex-none lg:justify-end">
 
-
-          {/* Priority */}
 
           <div className="flex items-center gap-2">
 
@@ -115,8 +111,6 @@ function TaskCard({
 
           </div>
 
-
-          {/* Status */}
 
           <div className="flex items-center gap-2">
 
@@ -163,8 +157,6 @@ function TaskCard({
 
           </div>
 
-
-          {/* Buttons */}
 
           <div className="flex items-center gap-2 w-full sm:w-auto">
 

@@ -36,7 +36,6 @@ function ProjectCard({
       <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
 
 
-        {/* Project Information */}
 
         <div className="flex-1 min-w-0">
           <h3 className="text-lg font-semibold text-gray-900 wrap-break-word line-clamp-2">
@@ -47,7 +46,6 @@ function ProjectCard({
             {description || "No description provided."}
           </p>
 
-          {/* Project Stats */}
 
           <div className="mt-4">
 
@@ -82,8 +80,6 @@ function ProjectCard({
             </div>
 
 
-            {/* Progress Bar */}
-
             <div className="w-full h-2 bg-gray-100 rounded-full mt-3 overflow-hidden">
 
               <div
@@ -100,12 +96,10 @@ function ProjectCard({
         </div>
 
 
-        {/* Project Controls */}
 
         <div className="grid grid-cols-2 gap-2 w-full sm:flex sm:flex-wrap sm:w-auto sm:items-center lg:justify-end">
 
 
-          {/* Status */}
 
           <select
             value={status}
@@ -129,7 +123,6 @@ function ProjectCard({
           </select>
 
 
-          {/* View Tasks */}
 
           <button
             type="button"
@@ -140,7 +133,6 @@ function ProjectCard({
           </button>
 
 
-          {/* Edit */}
 
           <button
             type="button"
@@ -151,7 +143,6 @@ function ProjectCard({
           </button>
 
 
-          {/* Delete */}
 
           <button
             type="button"

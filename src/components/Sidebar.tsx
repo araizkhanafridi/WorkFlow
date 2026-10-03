@@ -17,8 +17,7 @@ function Sidebar({
   const handlePageChange = (page: string) => {
     onPageChange(page)
 
-    // Mobile par page select hone ke baad
-    // sidebar automatically close ho jayega
+   
     setIsSidebarOpen(false)
   }
 
@@ -35,9 +34,7 @@ function Sidebar({
   return (
     <>
 
-      {/* =========================
-          MOBILE HEADER
-      ========================= */}
+  
 
       <div className="lg:hidden fixed top-0 left-0 right-0 h-16 bg-white border-b border-gray-200 flex items-center justify-between px-4 z-40">
 
@@ -73,9 +70,7 @@ function Sidebar({
       </div>
 
 
-      {/* =========================
-          MOBILE OVERLAY
-      ========================= */}
+   
 
       {isSidebarOpen && (
 
@@ -89,9 +84,7 @@ function Sidebar({
       )}
 
 
-      {/* =========================
-          SIDEBAR
-      ========================= */}
+      
 
       <aside
         className={`
@@ -117,7 +110,7 @@ function Sidebar({
         `}
       >
 
-        {/* Logo + Close Button */}
+    
 
         <div className="flex items-start justify-between mb-8">
 
@@ -134,7 +127,7 @@ function Sidebar({
           </div>
 
 
-          {/* Mobile Close Button */}
+        
 
           <button
             type="button"
@@ -163,7 +156,7 @@ function Sidebar({
         </div>
 
 
-        {/* Navigation */}
+      
 
         <nav className="space-y-2">
 
